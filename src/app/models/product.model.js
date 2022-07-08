@@ -1,8 +1,9 @@
 const db = require('./../../config/db');
 
 class Product{
-    static find(){
-        return db.execute('select * from products')
+    static find(limit){
+        let sql = limit? "select * from products limit "+limit :"SELECT * FROM products"
+        return db.execute(sql)
     }
 }
 
