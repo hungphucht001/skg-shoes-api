@@ -9,11 +9,11 @@ const public = {
 
 const local = {
     host : 'localhost',
-    user : 'root',
-    password : '',
+    user : 'admin',
+    password : 'hungphuc',
     database : 'skg_shoes'
     }
 
-const pool = mysql.createPool(public);
+const pool = mysql.createPool(local);
 
 module.exports = pool.promise();

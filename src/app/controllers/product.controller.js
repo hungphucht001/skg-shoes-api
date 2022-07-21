@@ -8,7 +8,6 @@ class ProductController {
         const s = req.query.s || 1;
         const type = req.query.type || "asc";
         const col = req.query.col || "id";
-
         const getProductAll = async () => {
             try {
                 const [data] = await Product.find(limit, (page - 1) * limit , s, col, type);
